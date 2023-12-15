@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<style>
+
+</style>
+<body>
+<header class="header shadow">
+  <div class="wrapper-in">
+    <div class="header__logo">
+      <a class="header__title" href="index.html"><h1>Furnit</h1></a>
+    </div>
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn other_menus" for="menu__toggle">
+        <span></span>
+      </label>
+
+      <nav class="header__nav hamburger-menu__nav">
+        <ul>
+          <li><a class="header__item animate menu__item" href="products.html">Products</a></li>
+          <li><a class="header__item animate menu__item" href="basket.html">Basket</a></li>
+          <li><a class="header__item btn menu__item" href="admin_page.html">Admin page</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="wrapper">
+  <section class="admin-page section-page">
+    <div class="title">
+      <h2>Admin Page</h2>
+      <p>An administrator is a person who can think for months before making a quick decision.</p>
+    </div>
+    <div class="table-wrapper">
+      <table class="admin-page-table">
+        <tbody id="admin-page-tbody">
+        <tr>
+          <td>ID</td>
+          <td>Title</td>
+          <td>Icon</td>
+          <td>Country</td>
+          <td>Quantity</td>
+          <td>Price</td>
+          <td>Edit</td>
+          <td>Remove</td>
+        </tr>
+
+
+        </tbody>
+      </table>
+        <button class="create-btn">Create new product</button>
+    </div>
+  </section>
+   <!-- Popup html  -->
+   <div class="overlay">
+    <div class="from-popup">
+      <h2 class="header-popup">Edit product:</h2>
+      <div class="wrap-popup">
+        <div id="name">
+          <p class="text">ID:</p>
+          <p class="text">Title:</p>
+          <p class="text"> Icon Url:</p>
+          <p class="text">Country:</p>
+          <p class="text">Quantity:</p>
+          <p class="text"> Price:</p>
+        </div>
+        <div class="divform">
+          <form  id="myform" action="">
+            <input class="input-Id input-popup" type="text" >
+            <input class="input-Title input-popup" type="text">
+            <input class="input-Url input-popup" type="url">
+            <input class="input-Contry input-popup" type="text">
+            <input class="input-Quantity input-popup" type="tel">
+            <input class="input-Price input-popup" type="text">
+          </form>
+        </div>
+
+      </div>
+      <div id="eror-Text"></div>
+      <div id="btnDiv">
+        <button class="create-btn" id="end-popup" >Save</button>
+      </div>
+    </div>
+  </div>
+  <!-- Popup html End -->
+</div>
+ 
+  <script src="script/new-product.js"></script>
+  <script src="script/admin_page.js"></script>
+</body>
+</html>
